@@ -62,7 +62,7 @@ All this talk of fragmentation making you nervous that you won't find the tool y
 Plotting
 --------
 
-- `Plots.jl <http://docs.juliaplots.org/latest/>`_: Powerful, modern plotting library with a syntax akin to that of `matplotlib` (in Python) or `plot` (in R). `StatsPlots <http://docs.juliaplots.org/latest/tutorial/#Using-Plot-Recipes-1) provides `Plots.jl` with recipes for many standard statistical plots.
+- `Plots.jl <http://docs.juliaplots.org/latest/>`_: Powerful, modern plotting library with a syntax akin to that of `matplotlib` (in Python) or `plot` (in R). `StatsPlots <http://docs.juliaplots.org/latest/tutorial/#Using-Plot-Recipes-1`_ provides `Plots.jl` with recipes for many standard statistical plots.
 - `Gadfly.jl <http://gadflyjl.org/stable/>`_: High-level plotting library with a "grammar of graphics" syntax akin to that of `ggplot` (in R).
 - `VegaLite.jl <https://www.queryverse.org/VegaLite.jl/stable/>`_: High-level plotting library that uses a different "grammar of graphics" syntax and has an emphasis on interactive graphics.
 
