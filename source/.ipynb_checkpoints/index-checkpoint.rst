@@ -80,6 +80,6 @@ Please let me know! All source files (and underlying jupyter notebooks) for this
    Note to R Users <note_to_r_users>
    Tabular Data Tools <tabular_data_tools>
    Statistics <statistics>
-   Unsupervised Machine Learning <unsupervised_machine_learning>
-   Supervised Machine Learning <supervised_machine_learning>
+   Unsupervised ML <unsupervised_machine_learning>
+   Supervised ML <supervised_machine_learning>
    Network Analysis <network_analysis>
