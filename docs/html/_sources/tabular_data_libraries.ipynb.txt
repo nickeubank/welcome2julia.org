@@ -1,0 +1,84 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Tabular Data Libraries in Julia\n",
+    "\n",
+    "## What is DataFrames?\n",
+    "\n",
+    "DataFrames.jl provides a lightweight set of tools for working with tabular data\n",
+    "in Julia. Its design and functionality are similar to those of `pandas`\n",
+    "(in Python) and `data.frames` (in R), making it a great general purpose\n",
+    "data science tool, especially for those coming to Julia from R or Python.\n",
+    "\n",
+    "DataFrames plays a central role in the Julia Data ecosystem, and has\n",
+    "tight integrations with a range of different libraries. DataFrames isn't the\n",
+    "best tool for everyone working with tabular data --- as noted below, there are\n",
+    "some other great libraries for certain use-cases --- but it provides great\n",
+    "data wrangling functionality through a familiar interface.\n",
+    "\n",
+    "Note that most tabular data libraries in the Julia ecosystem (including DataFrames)\n",
+    "support a common interface. As a result, some libraries are\n",
+    "capable or working with a range of tabular data structures, making it easy to\n",
+    "move between tabular libraries as your needs change. A user of\n",
+    "[`Query.jl`](https://github.com/queryverse/Query.jl), for example, can use the\n",
+    "same code to manipulate data in a DataFrame, a TypedTable, or a JuliaDB table.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## DataFrames and StatsModels.jl"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## DataFrames.jl IO"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "DataFrames work well with a range of formats, including (but not limited to) CSVs (using [`CSV.jl`](https://github.com/JuliaData/CSV.jl)), Stata, SPSS, and SAS files (using [`StatFiles.jl`](https://github.com/queryverse/StatFiles.jl)), JSON (using [`JSONTables.jl`](https://github.com/JuliaData/JSONTables.jl)), and reading (though not writing) parquet files (using [`ParquetFiles.jl`](https://github.com/queryverse/ParquetFiles.jl)).\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## TypedTables\n",
+    "\n",
+    "[`TypedTables.jl`](https://juliadata.github.io/TypedTables.jl/stable/): Type-stable heterogeneous tables. Useful for improved performance when the structure of your table is relatively stable."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Julia 1.4.1",
+   "language": "julia",
+   "name": "julia-1.4"
+  },
+  "language_info": {
+   "file_extension": ".jl",
+   "mimetype": "application/julia",
+   "name": "julia",
+   "version": "1.4.1"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}

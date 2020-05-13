@@ -15,6 +15,7 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Note to Pandas Users" href="note_to_pandas_users.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -43,112 +44,64 @@ different libraries more than some other languages.</p>
 <p>With that in mind, I’ve created this site to offer new Julia users a guide to
 the Julia ecosystem. This site is not a tutorial, but rather a guide to help
 people find the right packages to meet their needs.</p>
+<div class="section" id="tabular-data-libraries">
+<h2>Tabular Data Libraries<a class="headerlink" href="#tabular-data-libraries" title="Permalink to this headline">¶</a></h2>
+<p>Most people doing data science work have to work with messy tabular data of mixed
+types, and for that there are two main choices: <a class="reference external" href="http://juliadata.github.io/DataFrames.jl/stable">DataFrames.jl</a> and
+<a class="reference external" href="https://juliadb.org/">JuliaDB.jl</a>.</p>
+<p>DataFrames provides a lightweight set of tools for working with tabular data
+in Julia. Its design and functionality are similar to those of <cite>pandas</cite>
+(in Python) and <cite>data.frames</cite> (in R), making it a great general purpose
+data science tool, especially for those coming to Julia from R or Python. I would
+recommend this as a starting point to the vast majority of users.</p>
+<p>But if you’re working with data that is too large to fit in memory, JuliaDB offers
+better performance for large datasets, and can handle out-of-core data manipulations
+(Python users can think of JuliaDB as the Julia version of <cite>dask</cite>).</p>
+<p>You can find much more on [tabular data libraries here](tabular_data_libraries).</p>
+</div>
+<div class="section" id="statistical-modelling">
+<h2>Statistical Modelling<a class="headerlink" href="#statistical-modelling" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><strong>Statistical Modelling / Machine Learning</strong></p>
-<ul>
-<li><p><a class="reference external" href="https://docs.julialang.org/en/v1/stdlib/Statistics/"><code class="docutils literal notranslate"><span class="pre">Statistics</span></code></a>: The Julia standard library comes with a wide range of statistics functionality, but to gain access to these functions you must first load <code class="docutils literal notranslate"><span class="pre">Statistics</span></code>.</p></li>
-<li><p><a class="reference external" href="https://github.com/nalimilan/FreqTables.jl"><code class="docutils literal notranslate"><span class="pre">FreqTables.jl</span></code></a>: Create frequency tables / cross-tabulations. Tightly integrated with DataFrames.</p></li>
-<li><p><a class="reference external" href="https://juliastats.org/HypothesisTests.jl/stable/"><code class="docutils literal notranslate"><span class="pre">HypothesisTests.jl</span></code></a>: A range of hypothesis testing tools.</p></li>
-<li><p><a class="reference external" href="https://juliastats.org/GLM.jl/stable/manual/"><code class="docutils literal notranslate"><span class="pre">GLM.jl</span></code></a>: Tools for estimating linear and generalized linear models. Tightly integrated with DataFrames.</p></li>
-<li><p><a class="reference external" href="https://juliastats.org/StatsModels.jl/stable/"><code class="docutils literal notranslate"><span class="pre">StatsModels.jl</span></code></a>: For converting heterogeneous DataFrames into homogenous matrices for use with linear algebra libraries or machine learning applications that don’t directly support DataFrames. Will do things like convert categorical variables into indicators/one-hot-encodings, create interaction terms, etc.</p></li>
-<li><p><a class="reference external" href="https://multivariatestatsjl.readthedocs.io/en/stable/index.html"><code class="docutils literal notranslate"><span class="pre">MultivariateStats.jl</span></code></a>: linear regression, ridge regression, PCA, component analyses tools. Not well integrated with DataFrames, but easily used using <code class="docutils literal notranslate"><span class="pre">StatsModels</span></code>.</p></li>
-<li><p><a class="reference external" href="https://juliastats.org/Clustering.jl/stable/"><code class="docutils literal notranslate"><span class="pre">Clustering.jl</span></code></a>: All forms of clustering algorithms and tools for cluster evaluation.</p></li>
-<li><p><a class="reference external" href="https://fluxml.ai/Flux.jl/stable/"><code class="docutils literal notranslate"><span class="pre">Flux.jl</span></code></a>: A pure-Julia package for building your own machine learning models (a little more low-level than <code class="docutils literal notranslate"><span class="pre">Scikit-Learn</span></code>). Not well integrated with DataFrames, but easily used using <code class="docutils literal notranslate"><span class="pre">StatsModels</span></code>.</p></li>
-<li><p><a class="reference external" href="https://scikitlearnjl.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">ScikitLearn.jl</span></code></a>: A Julia wrapper around the full Python <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> machine learning library. Not well integrated with DataFrames, but easily used using <code class="docutils literal notranslate"><span class="pre">StatsModels</span></code>.</p></li>
+<li><p><a class="reference external" href="https://docs.julialang.org/en/v1/stdlib/Statistics/">Statistics</a>: The Julia standard library comes with a wide range of statistics functionality, but to gain access to these functions you must first load <cite>Statistics</cite>.</p></li>
+<li><p><a class="reference external" href="https://github.com/nalimilan/FreqTables.jl">FreqTables.jl</a>: Create frequency tables / cross-tabulations. Tightly integrated with DataFrames.</p></li>
+<li><p><a class="reference external" href="https://juliastats.org/HypothesisTests.jl/stable/">HypothesisTests.jl</a>: A range of hypothesis testing tools.</p></li>
+<li><p><a class="reference external" href="https://juliastats.org/GLM.jl/stable/manual/">GLM.jl</a>: Tools for estimating linear and generalized linear models. Tightly integrated with DataFrames.</p></li>
+<li><p><a class="reference external" href="https://juliastats.org/StatsModels.jl/stable/">StatsModels.jl</a>: For converting heterogeneous DataFrames into homogenous matrices for use with linear algebra libraries or machine learning applications that don’t directly support DataFrames. Will do things like convert categorical variables into indicators/one-hot-encodings, create interaction terms, etc.</p></li>
+<li><p><a class="reference external" href="https://multivariatestatsjl.readthedocs.io/en/stable/index.html">MultivariateStats.jl</a>: linear regression, ridge regression, PCA, component analyses tools. Not well integrated with DataFrames, but easily used using <cite>StatsModels</cite>.</p></li>
 </ul>
-</li>
-<li><p><strong>Plotting</strong></p>
-<ul>
-<li><p><a class="reference external" href="http://docs.juliaplots.org/latest/"><code class="docutils literal notranslate"><span class="pre">Plots.jl</span></code></a>: Powerful, modern plotting library with a syntax akin to that of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> (in Python) or <code class="docutils literal notranslate"><span class="pre">plot</span></code> (in R). <a class="reference external" href="http://docs.juliaplots.org/latest/tutorial/#Using-Plot-Recipes-1"><code class="docutils literal notranslate"><span class="pre">StatsPlots</span></code></a> provides <code class="docutils literal notranslate"><span class="pre">Plots.jl</span></code> with recipes for many standard statistical plots.</p></li>
-<li><p><a class="reference external" href="http://gadflyjl.org/stable/"><code class="docutils literal notranslate"><span class="pre">Gadfly.jl</span></code></a>: High-level plotting library with a “grammar of graphics” syntax akin to that of <code class="docutils literal notranslate"><span class="pre">ggplot</span></code> (in R).</p></li>
-<li><p><a class="reference external" href="https://www.queryverse.org/VegaLite.jl/stable/"><code class="docutils literal notranslate"><span class="pre">VegaLite.jl</span></code></a>: High-level plotting library that uses a different “grammar of graphics” syntax and has an emphasis on interactive graphics.</p></li>
-</ul>
-</li>
-<li><p><strong>Data Wrangling</strong>:</p>
-<ul>
-<li><p><a class="reference external" href="https://github.com/JuliaData/DataFramesMeta.jl"><code class="docutils literal notranslate"><span class="pre">DataFramesMeta.jl</span></code></a>: A range of convenience functions for DataFrames that augment <code class="docutils literal notranslate"><span class="pre">select</span></code> and <code class="docutils literal notranslate"><span class="pre">transform</span></code> to provide a user experience similar to that provided by <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> in R.</p></li>
-<li><p><a class="reference external" href="https://github.com/queryverse/Query.jl"><code class="docutils literal notranslate"><span class="pre">Query.jl</span></code></a>: <code class="docutils literal notranslate"><span class="pre">Query</span></code> provides a single framework for data wrangling that works with a range of libraries, including DataFrames, other tabular data libraries (more on those below), and even non-tabular data. Provides many convenience functions analogous to those in <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> or <code class="docutils literal notranslate"><span class="pre">linq</span></code>.</p></li>
-</ul>
-</li>
-<li><p><strong>And More!</strong></p>
-<ul>
-<li><p><a class="reference external" href="https://github.com/JuliaGraphs/LightGraphs.jl"><code class="docutils literal notranslate"><span class="pre">LightGraphs.jl</span></code></a>: A pure-Julia, high performance network analysis library. Edgelists in DataFrames can be easily converted into Graphs using the <a class="reference external" href="https://github.com/JuliaGraphs/GraphDataFrameBridge.jl"><code class="docutils literal notranslate"><span class="pre">GraphDataFrameBridge.jl</span></code></a> package.</p></li>
-</ul>
-</li>
-<li><p><strong>IO</strong>:</p>
-<ul>
-<li><p>DataFrames work well with a range of formats, including (but not limited to) CSVs (using <a class="reference external" href="https://github.com/JuliaData/CSV.jl"><code class="docutils literal notranslate"><span class="pre">CSV.jl</span></code></a>), Stata, SPSS, and SAS files (using <a class="reference external" href="https://github.com/queryverse/StatFiles.jl"><code class="docutils literal notranslate"><span class="pre">StatFiles.jl</span></code></a>), JSON (using <a class="reference external" href="https://github.com/JuliaData/JSONTables.jl"><code class="docutils literal notranslate"><span class="pre">JSONTables.jl</span></code></a>), and reading (though not writing) parquet files (using <a class="reference external" href="https://github.com/queryverse/ParquetFiles.jl"><code class="docutils literal notranslate"><span class="pre">ParquetFiles.jl</span></code></a>).</p></li>
-</ul>
-</li>
-</ul>
-<p>While not all of these libraries are tightly integrated with DataFrames, because
-DataFrames are essentially collections of aligned Julia vectors, so it is easy
-to (a) pull out a vector for use with a non-DataFrames-integrated library, or (b)
-use <code class="docutils literal notranslate"><span class="pre">StatsModels</span></code> to convert your table into a homogenously-typed matrix.</p>
-<div class="section" id="other-julia-tabular-libraries">
-<h2>Other Julia Tabular Libraries<a class="headerlink" href="#other-julia-tabular-libraries" title="Permalink to this headline">¶</a></h2>
-<p>DataFrames is a great general purpose tool for data manipulation and
-wrangling, but it’s not ideal for all applications. For users with more
-specialized needs, consider using:</p>
+</div>
+<div class="section" id="unsupervised-machine-learning">
+<h2>Unsupervised Machine Learning<a class="headerlink" href="#unsupervised-machine-learning" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://juliadata.github.io/TypedTables.jl/stable/"><code class="docutils literal notranslate"><span class="pre">TypedTables.jl</span></code></a>: Type-stable heterogeneous tables. Useful for improved performance when the structure of your table is relatively stable.</p></li>
-<li><p><a class="reference external" href="https://juliadata.github.io/JuliaDB.jl/stable/"><code class="docutils literal notranslate"><span class="pre">JuliaDB.jl</span></code></a>: For users working with data that is too large to fit in memory, we suggest JuliaDB, which offers better performance for large datasets, and can handle out-of-core data manipulations (Python users can think of JuliaDB as the Julia version of <code class="docutils literal notranslate"><span class="pre">dask</span></code>).</p></li>
+<li><p><a class="reference external" href="https://juliastats.org/Clustering.jl/stable/">Clustering.jl</a>: All forms of clustering algorithms and tools for cluster evaluation.</p></li>
 </ul>
-<p>Note that most tabular data libraries in the Julia ecosystem (including DataFrames)
-support a common interface. As a result, some libraries are
-capable or working with a range of tabular data structures, making it easy to
-move between tabular libraries as your needs change. A user of
-<a class="reference external" href="https://github.com/queryverse/Query.jl"><code class="docutils literal notranslate"><span class="pre">Query.jl</span></code></a>, for example, can use the
-same code to manipulate data in a DataFrame, a TypedTable, or a JuliaDB table.</p>
+</div>
+<div class="section" id="supervised-machine-learning">
+<h2>Supervised Machine Learning<a class="headerlink" href="#supervised-machine-learning" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://fluxml.ai/Flux.jl/stable/">Flux.jl</a>: A pure-Julia package for building your own (deep-learning) machine learning models (a little more low-level than <cite>Scikit-Learn</cite>). Not well integrated with DataFrames, but easily used using <cite>StatsModels</cite>.</p></li>
+<li><p><a class="reference external" href="https://scikitlearnjl.readthedocs.io/en/latest/">ScikitLearn.jl</a>: A Julia wrapper around the full Python <cite>scikit-learn</cite> machine learning library, making any tool you can’t immediately find in a pure-Julia library immediately accessible.</p></li>
+</ul>
+</div>
+<div class="section" id="plotting">
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://docs.juliaplots.org/latest/">Plots.jl</a>: Powerful, modern plotting library with a syntax akin to that of <cite>matplotlib</cite> (in Python) or <cite>plot</cite> (in R). <cite>StatsPlots &lt;http://docs.juliaplots.org/latest/tutorial/#Using-Plot-Recipes-1) provides `Plots.jl</cite> with recipes for many standard statistical plots.</p></li>
+<li><p><a class="reference external" href="http://gadflyjl.org/stable/">Gadfly.jl</a>: High-level plotting library with a “grammar of graphics” syntax akin to that of <cite>ggplot</cite> (in R).</p></li>
+<li><p><a class="reference external" href="https://www.queryverse.org/VegaLite.jl/stable/">VegaLite.jl</a>: High-level plotting library that uses a different “grammar of graphics” syntax and has an emphasis on interactive graphics.</p></li>
+</ul>
+</div>
+<div class="section" id="and-more">
+<h2>And More!<a class="headerlink" href="#and-more" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/JuliaGraphs/LightGraphs.jl">LightGraphs.jl</a>: A pure-Julia, high performance network analysis library. Edgelists in DataFrames can be easily converted into Graphs using the <a class="reference external" href="https://github.com/JuliaGraphs/GraphDataFrameBridge.jl">GraphDataFrameBridge.jl</a> package.</p></li>
+</ul>
 </div>
 <div class="section" id="questions-or-comments">
 <h2>Questions or comments?<a class="headerlink" href="#questions-or-comments" title="Permalink to this headline">¶</a></h2>
-<p>Please let me know! All source files (and underlying jupyter notebooks) for this site can be <code class="docutils literal notranslate"><span class="pre">found</span> <span class="pre">on</span> <span class="pre">github</span> <span class="pre">&lt;https://github.com/nickeubank/practicaldatascience/&gt;</span></code><em>, and you can raise issues there by creating a new issue, or by emailing me at <code class="docutils literal notranslate"><span class="pre">nick&#64;nickeubank.com</span> <span class="pre">&lt;mailto:nick&#64;nickeubank.com&gt;</span></code></em>.</p>
-<p>.. toctree::
-:maxdepth: 2
-:hidden:</p>
-<p>CLASS SCHEDULE &lt;class_schedule&gt;</p>
-<p>.. toctree::
-:maxdepth: 2
-:hidden:
-:caption: PYTHON &amp; PANDAS</p>
-<p>Setting Up Python &lt;setup_environment&gt;
-Managing Packages &lt;managing_python_packages&gt;
-Python / R Differences &lt;python_v_r&gt;
-Python: Vars v Objects &lt;vars_v_objects&gt;
-Numbers in Computers &lt;ints_and_floats&gt;
-Pandas 1: Series &lt;pandas_series&gt;
-Pandas 2: DataFrames &lt;pandas_dataframes&gt;
-Plotting, Basics &lt;plotting_part1&gt;
-Plotting, Advanced &lt;plotting_part2&gt;
-Pandas 3: Views &lt;views_and_copies_in_pandas&gt;</p>
-<p>.. toctree::
-:maxdepth: 2
-:hidden:
-:caption: OTHER TOOLS</p>
-<p>Command Line, Basics &lt;command_line_part1&gt;
-Command Line, Advanced  &lt;command_line_part2&gt;
-Jupyter <jupyter>
-Git and Github &lt;git_and_github&gt;</p>
-<p>.. toctree::
-:maxdepth: 2
-:hidden:
-:caption: SKILLS</p>
-<p>Getting Help Online &lt;getting_help&gt;
-Defensive Programming &lt;defensive_programming&gt;
-Workflow Management <workflow>
-What is Big Data? &lt;what_is_big_data&gt;
-Working with Big Data &lt;big_data_strategies&gt;
-Understanding Performance &lt;performance_understanding&gt;
-Solving Performance Probs &lt;performance_solutions&gt;
-Parallel Computing <parallelism>
-Distributed Computing &lt;distributed_computing&gt;</p>
-<p>.. toctree::
-:maxdepth: 2
-:hidden:
-:caption: OTHER</p>
-<p>Not a MIDS Student? &lt;not_a_mids_student&gt;
-Cheat Sheets <cheatsheets></p>
+<p>Please let me know! All source files (and underlying jupyter notebooks) for this site can be <a class="reference external" href="https://github.com/nickeubank/welcome2julia.org/">found on github</a>, and you can raise issues there by creating a new issue, or by emailing me at <a class="reference external" href="mailto:nick&#37;&#52;&#48;nickeubank&#46;com">nick<span>&#64;</span>nickeubank<span>&#46;</span>com</a>.</p>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
@@ -169,11 +122,21 @@ Cheat Sheets <cheatsheets></p>
 
 
 <h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="note_to_pandas_users.html">Note to Pandas Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="note_to_r_users.html">Note to R Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tabular_data_tools.html">Tabular Data Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unsupervised_machine_learning.html">Unsupervised Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supervised_machine_learning.html">Supervised Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_analysis.html">Network Analysis</a></li>
+</ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="note_to_pandas_users.html" title="next chapter">Note to Pandas Users</a></li>
   </ul></li>
 </ul>
 </div>
@@ -207,7 +170,7 @@ Cheat Sheets <cheatsheets></p>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/index.md.txt"
+      <a href="_sources/index.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
