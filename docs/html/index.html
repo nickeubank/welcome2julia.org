@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome To Julia! &#8212; welcome2julia</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-julia">
+<h1>Welcome To Julia!<a class="headerlink" href="#welcome-to-julia" title="Permalink to this headline">¶</a></h1>
+<p>Julia is a new, modern programming language designed for data science and
+scientific programming. It has a syntax like Python, but speeds like C, and
+incorporates decades of insights about programming language design.</p>
+<p>While I believe the language is wonderful and surprisingly intuitive, the Julia
+data ecosystem can be a difficult space for new users to navigate,
+in part because the Julia ecosystem tends to distribute functionality across
+different libraries more than some other languages.</p>
+<p>With that in mind, I’ve created this site to offer new Julia users a guide to
+the Julia ecosystem. This site is not a tutorial, but rather a guide to help
+people find the right packages to meet their needs.</p>
+<ul class="simple">
+<li><p><strong>Statistical Modelling / Machine Learning</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://docs.julialang.org/en/v1/stdlib/Statistics/"><code class="docutils literal notranslate"><span class="pre">Statistics</span></code></a>: The Julia standard library comes with a wide range of statistics functionality, but to gain access to these functions you must first load <code class="docutils literal notranslate"><span class="pre">Statistics</span></code>.</p></li>
+<li><p><a class="reference external" href="https://github.com/nalimilan/FreqTables.jl"><code class="docutils literal notranslate"><span class="pre">FreqTables.jl</span></code></a>: Create frequency tables / cross-tabulations. Tightly integrated with DataFrames.</p></li>
+<li><p><a class="reference external" href="https://juliastats.org/HypothesisTests.jl/stable/"><code class="docutils literal notranslate"><span class="pre">HypothesisTests.jl</span></code></a>: A range of hypothesis testing tools.</p></li>
+<li><p><a class="reference external" href="https://juliastats.org/GLM.jl/stable/manual/"><code class="docutils literal notranslate"><span class="pre">GLM.jl</span></code></a>: Tools for estimating linear and generalized linear models. Tightly integrated with DataFrames.</p></li>
+<li><p><a class="reference external" href="https://juliastats.org/StatsModels.jl/stable/"><code class="docutils literal notranslate"><span class="pre">StatsModels.jl</span></code></a>: For converting heterogeneous DataFrames into homogenous matrices for use with linear algebra libraries or machine learning applications that don’t directly support DataFrames. Will do things like convert categorical variables into indicators/one-hot-encodings, create interaction terms, etc.</p></li>
+<li><p><a class="reference external" href="https://multivariatestatsjl.readthedocs.io/en/stable/index.html"><code class="docutils literal notranslate"><span class="pre">MultivariateStats.jl</span></code></a>: linear regression, ridge regression, PCA, component analyses tools. Not well integrated with DataFrames, but easily used using <code class="docutils literal notranslate"><span class="pre">StatsModels</span></code>.</p></li>
+<li><p><a class="reference external" href="https://juliastats.org/Clustering.jl/stable/"><code class="docutils literal notranslate"><span class="pre">Clustering.jl</span></code></a>: All forms of clustering algorithms and tools for cluster evaluation.</p></li>
+<li><p><a class="reference external" href="https://fluxml.ai/Flux.jl/stable/"><code class="docutils literal notranslate"><span class="pre">Flux.jl</span></code></a>: A pure-Julia package for building your own machine learning models (a little more low-level than <code class="docutils literal notranslate"><span class="pre">Scikit-Learn</span></code>). Not well integrated with DataFrames, but easily used using <code class="docutils literal notranslate"><span class="pre">StatsModels</span></code>.</p></li>
+<li><p><a class="reference external" href="https://scikitlearnjl.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">ScikitLearn.jl</span></code></a>: A Julia wrapper around the full Python <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> machine learning library. Not well integrated with DataFrames, but easily used using <code class="docutils literal notranslate"><span class="pre">StatsModels</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Plotting</strong></p>
+<ul>
+<li><p><a class="reference external" href="http://docs.juliaplots.org/latest/"><code class="docutils literal notranslate"><span class="pre">Plots.jl</span></code></a>: Powerful, modern plotting library with a syntax akin to that of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> (in Python) or <code class="docutils literal notranslate"><span class="pre">plot</span></code> (in R). <a class="reference external" href="http://docs.juliaplots.org/latest/tutorial/#Using-Plot-Recipes-1"><code class="docutils literal notranslate"><span class="pre">StatsPlots</span></code></a> provides <code class="docutils literal notranslate"><span class="pre">Plots.jl</span></code> with recipes for many standard statistical plots.</p></li>
+<li><p><a class="reference external" href="http://gadflyjl.org/stable/"><code class="docutils literal notranslate"><span class="pre">Gadfly.jl</span></code></a>: High-level plotting library with a “grammar of graphics” syntax akin to that of <code class="docutils literal notranslate"><span class="pre">ggplot</span></code> (in R).</p></li>
+<li><p><a class="reference external" href="https://www.queryverse.org/VegaLite.jl/stable/"><code class="docutils literal notranslate"><span class="pre">VegaLite.jl</span></code></a>: High-level plotting library that uses a different “grammar of graphics” syntax and has an emphasis on interactive graphics.</p></li>
+</ul>
+</li>
+<li><p><strong>Data Wrangling</strong>:</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/JuliaData/DataFramesMeta.jl"><code class="docutils literal notranslate"><span class="pre">DataFramesMeta.jl</span></code></a>: A range of convenience functions for DataFrames that augment <code class="docutils literal notranslate"><span class="pre">select</span></code> and <code class="docutils literal notranslate"><span class="pre">transform</span></code> to provide a user experience similar to that provided by <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> in R.</p></li>
+<li><p><a class="reference external" href="https://github.com/queryverse/Query.jl"><code class="docutils literal notranslate"><span class="pre">Query.jl</span></code></a>: <code class="docutils literal notranslate"><span class="pre">Query</span></code> provides a single framework for data wrangling that works with a range of libraries, including DataFrames, other tabular data libraries (more on those below), and even non-tabular data. Provides many convenience functions analogous to those in <code class="docutils literal notranslate"><span class="pre">dplyr</span></code> or <code class="docutils literal notranslate"><span class="pre">linq</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>And More!</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/JuliaGraphs/LightGraphs.jl"><code class="docutils literal notranslate"><span class="pre">LightGraphs.jl</span></code></a>: A pure-Julia, high performance network analysis library. Edgelists in DataFrames can be easily converted into Graphs using the <a class="reference external" href="https://github.com/JuliaGraphs/GraphDataFrameBridge.jl"><code class="docutils literal notranslate"><span class="pre">GraphDataFrameBridge.jl</span></code></a> package.</p></li>
+</ul>
+</li>
+<li><p><strong>IO</strong>:</p>
+<ul>
+<li><p>DataFrames work well with a range of formats, including (but not limited to) CSVs (using <a class="reference external" href="https://github.com/JuliaData/CSV.jl"><code class="docutils literal notranslate"><span class="pre">CSV.jl</span></code></a>), Stata, SPSS, and SAS files (using <a class="reference external" href="https://github.com/queryverse/StatFiles.jl"><code class="docutils literal notranslate"><span class="pre">StatFiles.jl</span></code></a>), JSON (using <a class="reference external" href="https://github.com/JuliaData/JSONTables.jl"><code class="docutils literal notranslate"><span class="pre">JSONTables.jl</span></code></a>), and reading (though not writing) parquet files (using <a class="reference external" href="https://github.com/queryverse/ParquetFiles.jl"><code class="docutils literal notranslate"><span class="pre">ParquetFiles.jl</span></code></a>).</p></li>
+</ul>
+</li>
+</ul>
+<p>While not all of these libraries are tightly integrated with DataFrames, because
+DataFrames are essentially collections of aligned Julia vectors, so it is easy
+to (a) pull out a vector for use with a non-DataFrames-integrated library, or (b)
+use <code class="docutils literal notranslate"><span class="pre">StatsModels</span></code> to convert your table into a homogenously-typed matrix.</p>
+<div class="section" id="other-julia-tabular-libraries">
+<h2>Other Julia Tabular Libraries<a class="headerlink" href="#other-julia-tabular-libraries" title="Permalink to this headline">¶</a></h2>
+<p>DataFrames is a great general purpose tool for data manipulation and
+wrangling, but it’s not ideal for all applications. For users with more
+specialized needs, consider using:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://juliadata.github.io/TypedTables.jl/stable/"><code class="docutils literal notranslate"><span class="pre">TypedTables.jl</span></code></a>: Type-stable heterogeneous tables. Useful for improved performance when the structure of your table is relatively stable.</p></li>
+<li><p><a class="reference external" href="https://juliadata.github.io/JuliaDB.jl/stable/"><code class="docutils literal notranslate"><span class="pre">JuliaDB.jl</span></code></a>: For users working with data that is too large to fit in memory, we suggest JuliaDB, which offers better performance for large datasets, and can handle out-of-core data manipulations (Python users can think of JuliaDB as the Julia version of <code class="docutils literal notranslate"><span class="pre">dask</span></code>).</p></li>
+</ul>
+<p>Note that most tabular data libraries in the Julia ecosystem (including DataFrames)
+support a common interface. As a result, some libraries are
+capable or working with a range of tabular data structures, making it easy to
+move between tabular libraries as your needs change. A user of
+<a class="reference external" href="https://github.com/queryverse/Query.jl"><code class="docutils literal notranslate"><span class="pre">Query.jl</span></code></a>, for example, can use the
+same code to manipulate data in a DataFrame, a TypedTable, or a JuliaDB table.</p>
+</div>
+<div class="section" id="questions-or-comments">
+<h2>Questions or comments?<a class="headerlink" href="#questions-or-comments" title="Permalink to this headline">¶</a></h2>
+<p>Please let me know! All source files (and underlying jupyter notebooks) for this site can be <code class="docutils literal notranslate"><span class="pre">found</span> <span class="pre">on</span> <span class="pre">github</span> <span class="pre">&lt;https://github.com/nickeubank/practicaldatascience/&gt;</span></code><em>, and you can raise issues there by creating a new issue, or by emailing me at <code class="docutils literal notranslate"><span class="pre">nick&#64;nickeubank.com</span> <span class="pre">&lt;mailto:nick&#64;nickeubank.com&gt;</span></code></em>.</p>
+<p>.. toctree::
+:maxdepth: 2
+:hidden:</p>
+<p>CLASS SCHEDULE &lt;class_schedule&gt;</p>
+<p>.. toctree::
+:maxdepth: 2
+:hidden:
+:caption: PYTHON &amp; PANDAS</p>
+<p>Setting Up Python &lt;setup_environment&gt;
+Managing Packages &lt;managing_python_packages&gt;
+Python / R Differences &lt;python_v_r&gt;
+Python: Vars v Objects &lt;vars_v_objects&gt;
+Numbers in Computers &lt;ints_and_floats&gt;
+Pandas 1: Series &lt;pandas_series&gt;
+Pandas 2: DataFrames &lt;pandas_dataframes&gt;
+Plotting, Basics &lt;plotting_part1&gt;
+Plotting, Advanced &lt;plotting_part2&gt;
+Pandas 3: Views &lt;views_and_copies_in_pandas&gt;</p>
+<p>.. toctree::
+:maxdepth: 2
+:hidden:
+:caption: OTHER TOOLS</p>
+<p>Command Line, Basics &lt;command_line_part1&gt;
+Command Line, Advanced  &lt;command_line_part2&gt;
+Jupyter <jupyter>
+Git and Github &lt;git_and_github&gt;</p>
+<p>.. toctree::
+:maxdepth: 2
+:hidden:
+:caption: SKILLS</p>
+<p>Getting Help Online &lt;getting_help&gt;
+Defensive Programming &lt;defensive_programming&gt;
+Workflow Management <workflow>
+What is Big Data? &lt;what_is_big_data&gt;
+Working with Big Data &lt;big_data_strategies&gt;
+Understanding Performance &lt;performance_understanding&gt;
+Solving Performance Probs &lt;performance_solutions&gt;
+Parallel Computing <parallelism>
+Distributed Computing &lt;distributed_computing&gt;</p>
+<p>.. toctree::
+:maxdepth: 2
+:hidden:
+:caption: OTHER</p>
+<p>Not a MIDS Student? &lt;not_a_mids_student&gt;
+Cheat Sheets <cheatsheets></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Welcome2Julia</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Nick Eubank.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-166356925-1']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>
