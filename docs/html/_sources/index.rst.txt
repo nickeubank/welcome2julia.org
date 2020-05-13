@@ -43,16 +43,21 @@ Statistical Modelling
 - `StatsModels.jl <https://juliastats.org/StatsModels.jl/stable/>`_: For converting heterogeneous DataFrames into homogenous matrices for use with linear algebra libraries or machine learning applications that don't directly support DataFrames. Will do things like convert categorical variables into indicators/one-hot-encodings, create interaction terms, etc.
 - `MultivariateStats.jl <https://multivariatestatsjl.readthedocs.io/en/stable/index.html>`_: linear regression, ridge regression, PCA, component analyses tools. Not well integrated with DataFrames, but easily used using `StatsModels`.
 
-Unsupervised Machine Learning
------------------------------
+Machine Learning
+----------------
 
-- `Clustering.jl <https://juliastats.org/Clustering.jl/stable/>`_: All forms of clustering algorithms and tools for cluster evaluation.
+Perhaps more than any other part of the Julia ecosystem, machine learning tools are scattered across a bewildering array of libraries. There's a library for clustering (`Clustering.jl <https://juliastats.org/Clustering.jl/stable/>`_), a library for decision trees (`DecisionTree.jl <https://github.com/bensadeghi/DecisionTree.jl>`_), a library for XGBoost (`XGBoost.jl <https://github.com/dmlc/XGBoost.jl>`_), and, if you want to really build your own models, the extremely powerful `Flux.jl <https://fluxml.ai/Flux.jl/stable/>`_.
 
-Supervised Machine Learning
----------------------------
+Thankfully, though, if you're more of an applied user, there is a single package the pulls from all these different libraries and provides a single, `scikit-learn` inspired API: `MLJ.jl <https://github.com/alan-turing-institute/MLJ.jl>`_. MLJ provides a common interface for a wide range of machine learning algorithms. You can find a list of all supported models (both supervised and unsupervised), as well as an evaluation of the maturity of each library, `here <https://github.com/alan-turing-institute/MLJ.jl#available-models>`_, and `some great tutorials here <https://alan-turing-institute.github.io/MLJTutorials/>`_.  For *most* applied users, MLJ is probably a good place to start, especially if you like / are familiar with `scikit-learn`.
 
-- `Flux.jl <https://fluxml.ai/Flux.jl/stable/>`_: A pure-Julia package for building your own (deep-learning) machine learning models (a little more low-level than `Scikit-Learn`). Not well integrated with DataFrames, but easily used using `StatsModels`.
-- `ScikitLearn.jl <https://scikitlearnjl.readthedocs.io/en/latest/>`_: A Julia wrapper around the full Python `scikit-learn` machine learning library, making any tool you can't immediately find in a pure-Julia library immediately accessible.
+There are two exceptions to the "just use MLJ.jl" suggestion, however.
+
+First, MLJ doesn't offer much for deep learning. If you want to do deep learning, I would suggest `KNet.jl <https://denizyuret.github.io/Knet.jl/stable/tutorial/#Introduction-to-Knet-1>`_. It has a clean API, is fast and is likely the best choice for "standard" deep learning. And of course Julia has a TensorFlow wrapper (`TensorFlow.jl <https://github.com/malmaud/TensorFlow.jl>`_).
+
+And second, if you want to really build your own model from the ground up, then you probably want to use `Flux.jl <https://github.com/FluxML/Flux.jl>`_.
+
+All this talk of fragmentation making you nervous that you won't find the tool you want? Worry not! If you ever get stuck with Julia machine learning, you can always fall back on `ScikitLearn.jl <https://scikitlearnjl.readthedocs.io/en/latest/>`_, a simple wrapper for the full `scikit-learn` stack. :)
+
 
 Plotting
 --------
@@ -80,6 +85,6 @@ Please let me know! All source files (and underlying jupyter notebooks) for this
    Note to R Users <note_to_r_users>
    Tabular Data Tools <tabular_data_tools>
    Statistics <statistics>
-   Unsupervised Machine Learning <unsupervised_machine_learning>
-   Supervised Machine Learning <supervised_machine_learning>
+   Unsupervised ML <unsupervised_machine_learning>
+   Supervised ML <supervised_machine_learning>
    Network Analysis <network_analysis>
