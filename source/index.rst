@@ -52,9 +52,9 @@ Thankfully, though, if you're more of an applied user, there is a single package
 
 There are two exceptions to the "just use MLJ.jl" suggestion, however.
 
-First, MLJ doesn't offer much for deep learning. If you want to do deep learning, I would suggest `KNet.jl <https://denizyuret.github.io/Knet.jl/stable/tutorial/#Introduction-to-Knet-1>`_. It has a clean API, is fast and is likely the best choice for "standard" deep learning. And of course Julia has a TensorFlow wrapper (`TensorFlow.jl <https://github.com/malmaud/TensorFlow.jl>`_).
+First, MLJ doesn't offer much for deep learning. If you want to do deep learning, I would suggest `KNet.jl <https://denizyuret.github.io/Knet.jl/stable/tutorial/#Introduction-to-Knet-1>`_ if you want a pure Julia package. It has a clean API, supports both NVIDIA and AMD GPUs, is fast and is likely the best choice for "standard" deep learning. And of course Julia has a TensorFlow wrapper (`TensorFlow.jl <https://github.com/malmaud/TensorFlow.jl>`_), which in all honesty is a lot easier to use then the Python API. (No analogue for PyTorch in Julia yet, though.)
 
-And second, if you want to really build your own model from the ground up, then you probably want to use `Flux.jl <https://github.com/FluxML/Flux.jl>`_.
+And second, if you want to really build your own model from the ground up, then you probably want to use the pure-Julia `Flux.jl <https://github.com/FluxML/Flux.jl>`_, which has some great building blocks, but fewer pre-built models. 
 
 All this talk of fragmentation making you nervous that you won't find the tool you want? Worry not! If you ever get stuck with Julia machine learning, you can always fall back on `ScikitLearn.jl <https://scikitlearnjl.readthedocs.io/en/latest/>`_, a simple wrapper for the full `scikit-learn` stack. :)
 
