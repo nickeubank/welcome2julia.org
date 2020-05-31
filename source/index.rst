@@ -37,6 +37,7 @@ Statistical Modelling
 ---------------------
 
 - `Statistics <https://docs.julialang.org/en/v1/stdlib/Statistics/>`_: The Julia standard library comes with a wide range of statistics functionality, but to gain access to these functions you must first load `Statistics`.
+- `LinearAlgebra <https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/>`_: Like `Statistics`, many linear algebra functionality (factorizations, inversions, etc.) live in a library you have to load to use. Similarly, `SparseArrays <https://docs.julialang.org/en/v1/stdlib/SparseArrays/>`_ are also in the standard library but must be loaded to be used. 
 - `FreqTables.jl <https://github.com/nalimilan/FreqTables.jl>`_: Create frequency tables / cross-tabulations. Tightly integrated with DataFrames.
 - `HypothesisTests.jl <https://juliastats.org/HypothesisTests.jl/stable/>`_: A range of hypothesis testing tools.
 - `GLM.jl <https://juliastats.org/GLM.jl/stable/manual/>`_: Tools for estimating linear and generalized linear models. Tightly integrated with DataFrames.
@@ -54,7 +55,7 @@ There are two exceptions to the "just use MLJ.jl" suggestion, however.
 
 First, MLJ doesn't offer much for deep learning. If you want to do deep learning, I would suggest `KNet.jl <https://denizyuret.github.io/Knet.jl/stable/tutorial/#Introduction-to-Knet-1>`_ if you want a pure Julia package. It has a clean API, supports both NVIDIA and AMD GPUs, is fast and is likely the best choice for "standard" deep learning. And of course Julia has a TensorFlow wrapper (`TensorFlow.jl <https://github.com/malmaud/TensorFlow.jl>`_), which in all honesty is a lot easier to use then the Python API. (No analogue for PyTorch in Julia yet, though.)
 
-And second, if you want to really build your own model from the ground up, then you probably want to use the pure-Julia `Flux.jl <https://github.com/FluxML/Flux.jl>`_, which has some great building blocks, but fewer pre-built models. 
+And second, if you want to really build your own model from the ground up, then you probably want to use the pure-Julia `Flux.jl <https://github.com/FluxML/Flux.jl>`_, which has some great building blocks, but fewer pre-built models.
 
 All this talk of fragmentation making you nervous that you won't find the tool you want? Worry not! If you ever get stuck with Julia machine learning, you can always fall back on `ScikitLearn.jl <https://scikitlearnjl.readthedocs.io/en/latest/>`_, a simple wrapper for the full `scikit-learn` stack. :)
 
@@ -71,6 +72,7 @@ And More!
 ---------
 
 - `LightGraphs.jl <https://github.com/JuliaGraphs/LightGraphs.jl>`_: A pure-Julia, high performance network analysis library. Edgelists in DataFrames can be easily converted into Graphs using the `GraphDataFrameBridge.jl <https://github.com/JuliaGraphs/GraphDataFrameBridge.jl>`_ package.
+- `TextAnalysis.jl <https://github.com/JuliaText/TextAnalysis.jl>`_: A pure-Julia NLP package.
 
 Questions or comments?
 ----------------------
