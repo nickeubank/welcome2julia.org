@@ -43,6 +43,7 @@ Statistical Modelling
 - `GLM.jl <https://juliastats.org/GLM.jl/stable/manual/>`_: Tools for estimating linear and generalized linear models. Tightly integrated with DataFrames.
 - `StatsModels.jl <https://juliastats.org/StatsModels.jl/stable/>`_: For converting heterogeneous DataFrames into homogenous matrices for use with linear algebra libraries or machine learning applications that don't directly support DataFrames. Will do things like convert categorical variables into indicators/one-hot-encodings, create interaction terms, etc.
 - `MultivariateStats.jl <https://multivariatestatsjl.readthedocs.io/en/stable/index.html>`_: linear regression, ridge regression, PCA, component analyses tools. Not well integrated with DataFrames, but easily used using `StatsModels`.
+- `FixedEffectModels.jl <https://github.com/FixedEffects/FixedEffectModels.jl>`_: For panel regressions with (efficient) fixed effects and clustered standard errors.
 
 Machine Learning
 ----------------

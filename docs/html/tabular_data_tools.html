@@ -4,9 +4,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tabular Data Libraries in Julia &#8212; welcome2julia</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -15,8 +16,8 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Unsupervised Machine Learning" href="unsupervised_machine_learning.html" />
-    <link rel="prev" title="Welcome To Julia!" href="index.html" />
+    <link rel="next" title="Statistics" href="statistics.html" />
+    <link rel="prev" title="Note to R Users" href="note_to_r_users.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -99,20 +100,33 @@ div.nboutput.container div.prompt pre {
 /* all prompts */
 div.nbinput.container div.prompt,
 div.nboutput.container div.prompt {
-    min-width: 5ex;
-    padding-top: 0.4em;
-    padding-right: 0.4em;
-    text-align: right;
-    flex: 0;
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
 }
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
 @media (max-width: 540px) {
     div.nbinput.container div.prompt,
     div.nboutput.container div.prompt {
+        width: unset;
         text-align: left;
         padding: 0.4em;
     }
     div.nboutput.container div.prompt.empty {
         padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
     }
 }
 
@@ -125,7 +139,6 @@ div.nboutput.container div.prompt pre {
 /* input/output area */
 div.nbinput.container div.input_area,
 div.nboutput.container div.output_area {
-    padding: 0.4em;
     -webkit-flex: 1;
     flex: 1;
     overflow: auto;
@@ -198,6 +211,27 @@ div.nboutput.container div.output_area.stderr {
 
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
 
 /* Some additional styling taken form the Jupyter notebook CSS */
 div.rendered_html table {
@@ -288,6 +322,8 @@ div.rendered_html tbody tr:hover {
 
 <h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="note_to_pandas_users.html">Note to Pandas Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="note_to_r_users.html">Note to R Users</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tabular Data Tools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#What-is-DataFrames?">What is DataFrames?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#DataFrames-and-StatsModels.jl">DataFrames and StatsModels.jl</a></li>
@@ -296,15 +332,18 @@ div.rendered_html tbody tr:hover {
 <li class="toctree-l2"><a class="reference internal" href="#Wrangling">Wrangling</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="unsupervised_machine_learning.html">Unsupervised Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics.html">Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unsupervised_machine_learning.html">Unsupervised ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supervised_machine_learning.html">Supervised ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="network_analysis.html">Network Analysis</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome To Julia!</a></li>
-      <li>Next: <a href="unsupervised_machine_learning.html" title="next chapter">Unsupervised Machine Learning</a></li>
+      <li>Previous: <a href="note_to_r_users.html" title="previous chapter">Note to R Users</a></li>
+      <li>Next: <a href="statistics.html" title="next chapter">Statistics</a></li>
   </ul></li>
 </ul>
 </div>
@@ -334,7 +373,7 @@ div.rendered_html tbody tr:hover {
       &copy;2020, Nick Eubank.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

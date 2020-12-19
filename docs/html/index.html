@@ -4,9 +4,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome To Julia! &#8212; welcome2julia</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -63,11 +64,13 @@ better performance for large datasets, and can handle out-of-core data manipulat
 <h2>Statistical Modelling<a class="headerlink" href="#statistical-modelling" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.julialang.org/en/v1/stdlib/Statistics/">Statistics</a>: The Julia standard library comes with a wide range of statistics functionality, but to gain access to these functions you must first load <cite>Statistics</cite>.</p></li>
+<li><p><a class="reference external" href="https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/">LinearAlgebra</a>: Like <cite>Statistics</cite>, many linear algebra functionality (factorizations, inversions, etc.) live in a library you have to load to use. Similarly, <a class="reference external" href="https://docs.julialang.org/en/v1/stdlib/SparseArrays/">SparseArrays</a> are also in the standard library but must be loaded to be used.</p></li>
 <li><p><a class="reference external" href="https://github.com/nalimilan/FreqTables.jl">FreqTables.jl</a>: Create frequency tables / cross-tabulations. Tightly integrated with DataFrames.</p></li>
 <li><p><a class="reference external" href="https://juliastats.org/HypothesisTests.jl/stable/">HypothesisTests.jl</a>: A range of hypothesis testing tools.</p></li>
 <li><p><a class="reference external" href="https://juliastats.org/GLM.jl/stable/manual/">GLM.jl</a>: Tools for estimating linear and generalized linear models. Tightly integrated with DataFrames.</p></li>
 <li><p><a class="reference external" href="https://juliastats.org/StatsModels.jl/stable/">StatsModels.jl</a>: For converting heterogeneous DataFrames into homogenous matrices for use with linear algebra libraries or machine learning applications that don’t directly support DataFrames. Will do things like convert categorical variables into indicators/one-hot-encodings, create interaction terms, etc.</p></li>
 <li><p><a class="reference external" href="https://multivariatestatsjl.readthedocs.io/en/stable/index.html">MultivariateStats.jl</a>: linear regression, ridge regression, PCA, component analyses tools. Not well integrated with DataFrames, but easily used using <cite>StatsModels</cite>.</p></li>
+<li><p><a class="reference external" href="https://github.com/FixedEffects/FixedEffectModels.jl">FixedEffectModels.jl</a>: For panel regressions with (efficient) fixed effects and clustered standard errors.</p></li>
 </ul>
 </div>
 <div class="section" id="machine-learning">
@@ -163,7 +166,7 @@ better performance for large datasets, and can handle out-of-core data manipulat
       &copy;2020, Nick Eubank.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

@@ -37,11 +37,13 @@ Statistical Modelling
 ---------------------
 
 - `Statistics <https://docs.julialang.org/en/v1/stdlib/Statistics/>`_: The Julia standard library comes with a wide range of statistics functionality, but to gain access to these functions you must first load `Statistics`.
+- `LinearAlgebra <https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/>`_: Like `Statistics`, many linear algebra functionality (factorizations, inversions, etc.) live in a library you have to load to use. Similarly, `SparseArrays <https://docs.julialang.org/en/v1/stdlib/SparseArrays/>`_ are also in the standard library but must be loaded to be used. 
 - `FreqTables.jl <https://github.com/nalimilan/FreqTables.jl>`_: Create frequency tables / cross-tabulations. Tightly integrated with DataFrames.
 - `HypothesisTests.jl <https://juliastats.org/HypothesisTests.jl/stable/>`_: A range of hypothesis testing tools.
 - `GLM.jl <https://juliastats.org/GLM.jl/stable/manual/>`_: Tools for estimating linear and generalized linear models. Tightly integrated with DataFrames.
 - `StatsModels.jl <https://juliastats.org/StatsModels.jl/stable/>`_: For converting heterogeneous DataFrames into homogenous matrices for use with linear algebra libraries or machine learning applications that don't directly support DataFrames. Will do things like convert categorical variables into indicators/one-hot-encodings, create interaction terms, etc.
 - `MultivariateStats.jl <https://multivariatestatsjl.readthedocs.io/en/stable/index.html>`_: linear regression, ridge regression, PCA, component analyses tools. Not well integrated with DataFrames, but easily used using `StatsModels`.
+- `FixedEffectModels.jl <https://github.com/FixedEffects/FixedEffectModels.jl>`_: For panel regressions with (efficient) fixed effects and clustered standard errors.
 
 Machine Learning
 ----------------
